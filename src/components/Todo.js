@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'semantic-ui-react';
 import './Todo.css';
 
 const Todo = (props) => {
@@ -7,12 +8,12 @@ const Todo = (props) => {
   }
 
   return (
-    <div 
+    <Card 
       onClick={handleClick} 
       className={`${props.todo.completed ? "completed" : ""}`}
-    >
-      {props.todo.task}
-    </div>
+      header={props.todo.task}
+    />
+  
   );
 }
 

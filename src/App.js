@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container, Header, Divider } from 'semantic-ui-react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
@@ -40,8 +41,9 @@ class App extends React.Component {
   
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <Container>
+        <Header as='h1'>Adam's Todo List</Header>
+        <Divider hidden />
         <TodoList 
           todos={this.state.todos} 
           toggleCompleted={this.toggleCompleted} 
@@ -50,7 +52,7 @@ class App extends React.Component {
           addNewTodo={this.addNewTodo} 
           clearCompleted={this.clearCompleted} 
         />
-      </div>
+      </Container>
     );
   }
 }

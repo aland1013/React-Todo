@@ -1,10 +1,11 @@
 import React from 'react';
+import { Card } from 'semantic-ui-react';
 import Todo from './Todo';
 
 const TodoList = props => {
   console.log(props);
   return (
-    <div>
+    <Card.Group itemsPerRow={4}>
       {props.todos.map(todo => (
         <Todo 
           todo={todo} 
@@ -12,7 +13,7 @@ const TodoList = props => {
           toggleCompleted={props.toggleCompleted} 
         />
       ))}
-    </div>
+    </Card.Group>
   );
 }
 
